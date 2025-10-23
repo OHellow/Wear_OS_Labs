@@ -28,9 +28,9 @@ fun AccentButton(
     modifier: Modifier = Modifier
 ) {
     val (containerSize, iconSize) = when (accent) {
-        ButtonAccent.HIGH -> 60.dp to 30.dp  // Large for high accent
-        ButtonAccent.MEDIUM -> 52.dp to 26.dp // Default for medium
-        ButtonAccent.LOW -> 48.dp to 24.dp   // Small for low accent
+        ButtonAccent.HIGH -> 60.dp to 30.dp
+        ButtonAccent.MEDIUM -> 52.dp to 26.dp
+        ButtonAccent.LOW -> 48.dp to 24.dp
     }
 
     Column(
@@ -91,7 +91,6 @@ fun AccentButton(
             }
         }
 
-        // Show text label if provided
         text?.let {
             Text(
                 text = it,

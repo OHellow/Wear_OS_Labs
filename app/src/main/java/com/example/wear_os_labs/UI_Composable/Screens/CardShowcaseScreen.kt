@@ -15,9 +15,7 @@ import androidx.wear.compose.material.TimeText
 import com.example.wear_os_labs.UI_Composable.Components.CardShowcase
 
 @Composable
-fun CardShowcaseScreen(
-    onNavigateBack: () -> Unit
-) {
+fun CardShowcaseScreen() {
     Scaffold(
         timeText = { TimeText() }
     ) {
@@ -39,7 +37,6 @@ fun CardShowcaseScreen(
             )
 
             CardShowcase(
-                onNavigateBack = onNavigateBack,
                 modifier = Modifier.weight(1f)
             )
         }

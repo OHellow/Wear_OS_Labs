@@ -22,13 +22,12 @@ import com.example.wear_os_labs.UI_Composable.Components.Buttons.ButtonAccent
 
 @Composable
 fun CardShowcase(
-    onNavigateBack: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
         modifier = modifier
             .fillMaxWidth()
-            .verticalScroll(rememberScrollState()), // Only one scroll modifier here
+            .verticalScroll(rememberScrollState()),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(20.dp)
     ) {
@@ -62,15 +61,6 @@ fun CardShowcase(
             textAlign = TextAlign.Center
         )
         ImageCard()
-
-        Spacer(modifier = Modifier.height(16.dp))
-        AccentButton(
-            onClick = onNavigateBack,
-            icon = Icons.Default.ArrowBack,
-            text = "Back",
-            accent = ButtonAccent.MEDIUM,
-            modifier = Modifier.fillMaxWidth(0.8f)
-        )
 
         Spacer(modifier = Modifier.height(16.dp))
     }
