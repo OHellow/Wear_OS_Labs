@@ -7,11 +7,8 @@ import androidx.wear.compose.material.MaterialTheme
 fun Wear_OS_LabsTheme(
     content: @Composable () -> Unit
 ) {
-    /**
-     * Empty theme to customize for your app.
-     * See: https://developer.android.com/jetpack/compose/designsystems/custom
-     */
     MaterialTheme(
+        colors = wearColorPalette,
         content = content
     )
 }

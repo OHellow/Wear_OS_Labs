@@ -5,40 +5,54 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material.Scaffold
 import androidx.wear.compose.material.Text
 import androidx.wear.compose.material.TimeText
-import com.example.wear_os_labs.UI_Composable.Components.ButtonShowcase
+import com.example.wear_os_labs.UI_Composable.Components.Buttons.PrimaryButton
 
 @Composable
-fun MainScreen() {
+fun MainScreen(
+    onNavigateToList: () -> Unit,
+    onNavigateToCards: () -> Unit
+) {
     Scaffold(
         timeText = { TimeText() }
     ) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
             Text(
-                text = "Button Showcase",
-                modifier = Modifier.fillMaxWidth(),
-                textAlign = TextAlign.Center,
-                color = androidx.wear.compose.material.MaterialTheme.colors.primary,
-                style = androidx.wear.compose.material.MaterialTheme.typography.title3
+                text = "Main Navigation",
+                style = androidx.wear.compose.material.MaterialTheme.typography.caption2,
+                color = Color.Black,
+                modifier = Modifier.fillMaxWidth().padding(top = 16.dp),
+                textAlign = TextAlign.Center
             )
 
-            ButtonShowcase()
+            Column(
+                modifier = Modifier.fillMaxWidth(0.8f),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                PrimaryButton(
+                    text = "View Cards Showcase",
+                    onClick = onNavigateToCards
+                )
+
+                PrimaryButton(
+                    text = "Go to List Screen",
+                    onClick = onNavigateToList
+                )
+            }
         }
     }
 }
