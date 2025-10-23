@@ -97,7 +97,6 @@ fun MainScreen(
                         "Android Architecture"
                     ),
                     onItemClick = { item ->
-                        // Handle course selection
                         println("Selected course: $item")
                     },
                     modifier = Modifier
