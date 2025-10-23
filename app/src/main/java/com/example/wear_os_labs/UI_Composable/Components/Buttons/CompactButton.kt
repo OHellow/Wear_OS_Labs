@@ -27,7 +27,7 @@ fun CompactButton(
     ) {
         Button(
             onClick = onClick,
-            modifier = Modifier.size(48.dp), // Compact container: 48x48 dp
+            modifier = Modifier.size(48.dp),
             colors = ButtonDefaults.buttonColors(
                 backgroundColor = Color.DarkGray,
                 contentColor = Color.White
@@ -36,7 +36,7 @@ fun CompactButton(
             Icon(
                 imageVector = icon,
                 contentDescription = text,
-                modifier = Modifier.size(24.dp) // Compact icon: 24x24 dp
+                modifier = Modifier.size(24.dp)
             )
         }
         Text(

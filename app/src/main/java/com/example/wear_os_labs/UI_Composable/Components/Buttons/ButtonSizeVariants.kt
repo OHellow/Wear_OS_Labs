@@ -31,7 +31,6 @@ fun ButtonSizeVariants() {
         horizontalArrangement = Arrangement.SpaceEvenly,
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // Large size
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Button(
                 onClick = { toggleState = !toggleState },
@@ -54,7 +53,6 @@ fun ButtonSizeVariants() {
             )
         }
 
-        // Default size
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Button(
                 onClick = { toggleState = !toggleState },
@@ -77,7 +75,6 @@ fun ButtonSizeVariants() {
             )
         }
 
-        // Small size
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Button(
                 onClick = { toggleState = !toggleState },
@@ -100,7 +97,6 @@ fun ButtonSizeVariants() {
             )
         }
 
-        // Extra Small size
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             IconButton(
                 onClick = { toggleState = !toggleState },

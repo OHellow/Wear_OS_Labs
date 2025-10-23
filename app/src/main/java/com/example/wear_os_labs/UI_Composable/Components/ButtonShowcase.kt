@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Favorite
@@ -41,7 +40,6 @@ fun ButtonShowcase() {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(24.dp)
     ) {
-        // Section 1: Button Accents (using generic AccentButton)
         Text(
             text = "Button Accents",
             style = MaterialTheme.typography.caption2,
@@ -63,17 +61,15 @@ fun ButtonShowcase() {
             modifier = Modifier.fillMaxWidth(0.9f),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            // Medium Accent
             AccentButton(
-                onClick = { /* Handle click */ },
+                onClick = {},
                 icon = Icons.Default.Settings,
                 text = "Settings",
                 accent = ButtonAccent.MEDIUM
             )
 
-            // Low Accent
             AccentButton(
-                onClick = { /* Handle click */ },
+                onClick = {},
                 icon = Icons.Default.Favorite,
                 text = "Favorite",
                 accent = ButtonAccent.LOW
@@ -82,7 +78,6 @@ fun ButtonShowcase() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Section 2: Button Types (using specialized buttons)
         Text(
             text = "Button Types",
             style = MaterialTheme.typography.caption2,
@@ -95,7 +90,6 @@ fun ButtonShowcase() {
             modifier = Modifier.fillMaxWidth(0.9f),
             horizontalArrangement = Arrangement.SpaceEvenly
         ) {
-            // Toggle Button (specialized)
             ToggleButton(
                 checked = toggleState,
                 onCheckedChange = { toggleState = it },
@@ -103,9 +97,8 @@ fun ButtonShowcase() {
                 text = "Toggle"
             )
 
-            // Compact Button (specialized)
             CompactButton(
-                onClick = { /* Handle click */ },
+                onClick = {},
                 icon = Icons.Default.Check,
                 text = "Pause"
             )
@@ -113,7 +106,6 @@ fun ButtonShowcase() {
 
         Spacer(modifier = Modifier.height(8.dp))
 
-        // Section 3: Button Sizes (using specialized component)
         Text(
             text = "Button Sizes",
             style = MaterialTheme.typography.caption2,
