@@ -13,6 +13,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             Wear_OS_LabsTheme {
+                //
                 AppNavigation()
             }
         }
